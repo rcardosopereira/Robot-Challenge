@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230802 21:26:23.836" rpa="false" schemaversion="4">
+<suite id="s1" name="Automation" source="C:\Rafael\Projects\Python\PycharmProjects\Challenge\automation.robot">
+<test id="s1-t1" name="Find Two Most Expensive Books In Launches Category" line="6">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230802 21:26:24.077" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230802 21:26:24.077" endtime="20230802 21:26:26.147"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.amazon.com.br/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230802 21:26:26.147" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20230802 21:26:26.147" endtime="20230802 21:26:27.384"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230802 21:26:27.385" endtime="20230802 21:26:27.521"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Going to the 'Livros' category...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230802 21:26:27.522" level="INFO">Going to the 'Livros' category...</msg>
+<status status="PASS" starttime="20230802 21:26:27.522" endtime="20230802 21:26:27.522"/>
+</kw>
+<kw name="Go To Category">
+<arg>Livros</arg>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${category_name}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230802 21:26:27.524" level="INFO">Clicking link 'Livros'.</msg>
+<status status="PASS" starttime="20230802 21:26:27.523" endtime="20230802 21:26:29.499"/>
+</kw>
+<status status="PASS" starttime="20230802 21:26:27.523" endtime="20230802 21:26:29.499"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 21:26:34.500" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230802 21:26:29.500" endtime="20230802 21:26:34.500"/>
+</kw>
+<kw name="Click Subcategory">
+<arg>xpath=//img[@alt='Lançamentos']</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${subcategory_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 21:26:34.501" level="INFO">Clicking element 'xpath=//img[@alt='Lançamentos']'.</msg>
+<status status="PASS" starttime="20230802 21:26:34.501" endtime="20230802 21:26:35.967"/>
+</kw>
+<status status="PASS" starttime="20230802 21:26:34.500" endtime="20230802 21:26:35.967"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 21:26:40.968" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230802 21:26:35.967" endtime="20230802 21:26:40.968"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finding the first most expensive book...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230802 21:26:40.969" level="INFO">Finding the first most expensive book...</msg>
+<status status="PASS" starttime="20230802 21:26:40.968" endtime="20230802 21:26:40.969"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="acs-product-block-6"]/div[1]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 21:26:40.970" level="INFO">Clicking element '//*[@id="acs-product-block-6"]/div[1]/a/img'.</msg>
+<status status="PASS" starttime="20230802 21:26:40.970" endtime="20230802 21:26:43.998"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 21:26:47.000" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230802 21:26:43.998" endtime="20230802 21:26:47.000"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Adding the first most expensive book to the cart...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230802 21:26:47.000" level="INFO">Adding the first most expensive book to the cart...</msg>
+<status status="PASS" starttime="20230802 21:26:47.000" endtime="20230802 21:26:47.000"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=add-to-cart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 21:26:47.001" level="INFO">Clicking element 'id=add-to-cart-button'.</msg>
+<status status="PASS" starttime="20230802 21:26:47.001" endtime="20230802 21:26:48.865"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 21:26:51.867" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230802 21:26:48.866" endtime="20230802 21:26:51.867"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Going to the 'Livros' category again...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230802 21:26:51.867" level="INFO">Going to the 'Livros' category again...</msg>
+<status status="PASS" starttime="20230802 21:26:51.867" endtime="20230802 21:26:51.867"/>
+</kw>
+<kw name="Go To Category">
+<arg>Livros</arg>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${category_name}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230802 21:26:51.868" level="INFO">Clicking link 'Livros'.</msg>
+<status status="PASS" starttime="20230802 21:26:51.868" endtime="20230802 21:26:53.458"/>
+</kw>
+<status status="PASS" starttime="20230802 21:26:51.868" endtime="20230802 21:26:53.458"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 21:26:58.460" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230802 21:26:53.459" endtime="20230802 21:26:58.460"/>
+</kw>
+<kw name="Click Subcategory">
+<arg>xpath=//img[@alt='Lançamentos']</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${subcategory_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 21:26:58.461" level="INFO">Clicking element 'xpath=//img[@alt='Lançamentos']'.</msg>
+<status status="PASS" starttime="20230802 21:26:58.461" endtime="20230802 21:26:59.753"/>
+</kw>
+<status status="PASS" starttime="20230802 21:26:58.461" endtime="20230802 21:26:59.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 21:27:04.755" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230802 21:26:59.754" endtime="20230802 21:27:04.755"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finding the second most expensive book...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230802 21:27:04.756" level="INFO">Finding the second most expensive book...</msg>
+<status status="PASS" starttime="20230802 21:27:04.756" endtime="20230802 21:27:04.756"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="acs-product-block-0"]/div[1]/a/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 21:27:04.757" level="INFO">Clicking element '//*[@id="acs-product-block-0"]/div[1]/a/img'.</msg>
+<status status="PASS" starttime="20230802 21:27:04.757" endtime="20230802 21:27:07.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 21:27:10.886" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230802 21:27:07.886" endtime="20230802 21:27:10.886"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Adding the second most expensive book to the cart...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230802 21:27:10.887" level="INFO">Adding the second most expensive book to the cart...</msg>
+<status status="PASS" starttime="20230802 21:27:10.886" endtime="20230802 21:27:10.887"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=add-to-cart-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 21:27:10.889" level="INFO">Clicking element 'id=add-to-cart-button'.</msg>
+<status status="PASS" starttime="20230802 21:27:10.887" endtime="20230802 21:27:12.425"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 21:27:15.426" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230802 21:27:12.425" endtime="20230802 21:27:15.426"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230802 21:27:15.427" endtime="20230802 21:27:21.675"/>
+</kw>
+<status status="PASS" starttime="20230802 21:26:24.076" endtime="20230802 21:27:21.676"/>
+</test>
+<status status="PASS" starttime="20230802 21:26:23.837" endtime="20230802 21:27:21.677"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation">Automation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
